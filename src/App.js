@@ -7,7 +7,6 @@ import Player from "./Components/Player/Player";
 import { StateProviderValue } from "./StateProvider";
 const spotify = new SpotifyWebApi();
 function App() {
-  // const [token, setToken] = useState(null);
   const [{ user, token }, dispatch] = StateProviderValue();
   useEffect(() => {
     const hash = getTokenFromUrl();
@@ -30,7 +29,11 @@ function App() {
   }, []);
   console.log("the user", user);
   console.log("the token", token);
-  return <div className="app">{token ? <Player /> : <Login />}</div>;
+  return (
+    <div className="app">
+      {token ? <Player spotify={spotify} /> : <Login />}
+    </div>
+  );
 }
 
 export default App;
