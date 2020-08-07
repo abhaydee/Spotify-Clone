@@ -4,9 +4,11 @@ import Login from "./Components/Login/Login";
 import { getTokenFromUrl } from "./Utils/spotify";
 import SpotifyWebApi from "spotify-web-api-js";
 import Player from "./Components/Player/Player";
+import { stateProviderValue } from "./StateProvider";
 const spotify = new SpotifyWebApi();
 function App() {
   const [token, setToken] = useState(null);
+  const [{}, dispatch] = stateProviderValue();
   useEffect(() => {
     const hash = getTokenFromUrl();
     window.location.hash = "";
@@ -16,6 +18,10 @@ function App() {
       spotify.setAccessToken(_token);
       spotify.getMe().then((user) => {
         console.log(user);
+        dispatch({
+          type: "SET_USER",
+          user,
+        });
       });
     }
   }, []);
