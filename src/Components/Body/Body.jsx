@@ -1,7 +1,12 @@
 import React from "react";
 import "./Body.css";
+import Header from "../Header/Header";
 function Body() {
-  return <div className="body">Body</div>;
+  return (
+    <div className="body">
+      <Header />
+    </div>
+  );
 }
 
 export default Body;
