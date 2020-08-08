@@ -7,6 +7,7 @@ function Body({ spotify }) {
       <Header spotify={spotify} />
       <div className="body__info">
         <img
+          className="body__image"
           src="https://i.scdn.co/image/ab67706f00000003afae879804953e376fb32fe0"
           alt=""
         />
