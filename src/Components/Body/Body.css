@@ -1,4 +1,5 @@
 .body {
   border: solid 1px red;
   flex: 0.8;
+  background: linear-gradient(rgb(97, 87, 115), rgba(0, 0, 1));
 }
