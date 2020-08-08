@@ -2,6 +2,9 @@ import React from "react";
 import "./Body.css";
 import Header from "../Header/Header";
 import { StateProviderValue } from "../../StateProvider";
+import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
+import FavouriteIcon from "@material-ui/icons/Favorite";
+import MoreHorizIcon from "@material-ui/icons/MoreHoriz";
 function Body({ spotify }) {
   const [{ discover_weekly }, dispatch] = StateProviderValue();
   return (
@@ -19,7 +22,13 @@ function Body({ spotify }) {
           <p>{discover_weekly?.description}</p>
         </div>
       </div>
-      <div className="body__songs"></div>
+      <div className="body__songs">
+        <div className="body__icons">
+          <PlayCircleFilledIcon className="body__shuffle" />
+          <FavouriteIcon fontSize="large" />
+          <MoreHorizIcon />
+        </div>
+      </div>
     </div>
   );
 }

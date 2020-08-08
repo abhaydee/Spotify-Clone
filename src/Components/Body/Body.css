@@ -26,3 +26,28 @@
 .body__infoText > p {
   font-size: 0.875rem;
 }
+
+.body__icons {
+  display: flex;
+  align-items: center;
+}
+
+.body__icons > .MuiSvgIcon-root {
+  margin-right: 1.25rem;
+}
+
+.body__shuffle {
+  font-size: 5rem !important;
+  margin-left: 3.125rem;
+  margin-right: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.body__shuffle:hover {
+  transition: 100ms transform ease-in;
+  transform: scale(1.08);
+}
+
+.body__songs {
+  margin: 1.25rem -1.875rem;
+}
