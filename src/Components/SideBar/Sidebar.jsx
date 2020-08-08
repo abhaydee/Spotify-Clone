@@ -4,7 +4,10 @@ import Sidebaroption from "../SideBarOption/Sidebaroption";
 import HomeIcon from "@material-ui/icons/Home";
 import SearchIcon from "@material-ui/icons/Search";
 import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
+import { StateProviderValue } from "../../StateProvider";
 function Sidebar() {
+  const [{ playlists }, dispatch] = StateProviderValue();
+  console.log("retrieving playlists", playlists);
   return (
     <div className="sidebar">
       <img
@@ -18,9 +21,9 @@ function Sidebar() {
       <br />
       <strong className="sidebar__title">PLAYLISTS</strong>
       <hr />
-      <Sidebaroption title="Hip Hop" />
-      <Sidebaroption title="Rock" />
-      <Sidebaroption title="Rnb" />
+      {playlists?.items?.map((playlist) => (
+        <Sidebaroption title={playlist.name} />
+      ))}
     </div>
   );
 }
