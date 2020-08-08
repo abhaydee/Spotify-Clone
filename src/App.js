@@ -32,7 +32,7 @@ function App() {
           playlists,
         });
       });
-      spotify.getPlaylist("0GB9chRwz1EI9MkT3BjfbO").then((response) => {
+      spotify.getPlaylist("37i9dQZF1DWSNmwgf7Nv11").then((response) => {
         dispatch({
           type: "SET_DISCOVER_WEEKLY",
           discover_weekly: response,
