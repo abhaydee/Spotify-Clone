@@ -2,10 +2,14 @@
   flex: 0.8;
   padding: 1.875rem;
   height: 100vh;
+  overflow: overlay;
   color: white;
   background: linear-gradient(rgb(97, 87, 115), rgba(0, 0, 1));
 }
 
+.body::-webkit-scrollbar {
+  display: none;
+}
 .body__image {
   height: 20vw;
   margin: 0 1.25rem;
