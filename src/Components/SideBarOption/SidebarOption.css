@@ -21,6 +21,12 @@
   font-size: 0.75rem;
 }
 .sidebarOption__icon {
-  padding-left: 0.875rem;
-  padding-right: 0.875rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+}
+
+.sidebarOption > p {
+  margin-top: 0.625rem;
+  margin-left: 1.25rem;
+  font-size: 0.875rem;
 }
