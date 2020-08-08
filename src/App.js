@@ -26,7 +26,7 @@ function App() {
         });
       });
     }
-  }, []);
+  }, [dispatch]);
   console.log("the user", user);
   console.log("the token", token);
   return (
